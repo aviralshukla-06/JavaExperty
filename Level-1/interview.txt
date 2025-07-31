@@ -1,0 +1,96 @@
+🔸 Method Overloading – Interview Questions
+✅ Conceptual / Theoretical Questions
+What is method overloading in Java?
+
+How does Java distinguish between overloaded methods?
+
+Can method overloading occur based on different return types alone? Why or why not?
+
+Is method overloading polymorphism? If yes, what kind?
+
+What are the rules Java uses to resolve overloaded methods?
+
+Can you overload static methods?
+
+Can you overload main() in Java? What happens?
+
+Can constructors be overloaded? Explain with example.
+
+What is type promotion in method overloading?
+
+What is ambiguity in method overloading? Give an example.
+
+🧠 Trick-Based or Edge Case Questions
+What happens if there are two overloaded methods with int and long as parameters and you pass a byte?
+
+Can varargs participate in method overloading? What if there’s both varargs and regular parameters?
+
+How does autoboxing/unboxing affect method overloading resolution?
+
+What happens when both widening and boxing are possible?
+
+Does method overloading work across inheritance hierarchies?
+
+🔸 Recursion – Interview Questions
+✅ Conceptual / Theoretical Questions
+What is recursion? How does it work in Java?
+
+What is a base case and why is it necessary?
+
+What is stack overflow in recursion?
+
+Compare recursion vs iteration: when do you prefer one over the other?
+
+What are the pros and cons of using recursion?
+
+What is tail recursion? Does Java optimize for tail recursion?
+
+How does recursion use the call stack?
+
+What is backtracking and how is recursion used in it?
+
+💻 Coding Questions (Common in Interviews)
+🔹 Basic:
+Write a recursive method to calculate the factorial of a number.
+
+Implement a function to reverse a string using recursion.
+
+Find the nth Fibonacci number using recursion.
+
+Find sum of digits of a number using recursion.
+
+Write a recursive function to calculate power a^b.
+
+🔹 Intermediate:
+Write a recursive binary search algorithm.
+
+Print all subsets of a given string using recursion.
+
+Solve the Tower of Hanoi problem using recursion.
+
+Write a recursive function to count the number of zeroes in an integer.
+
+Check whether a string is a palindrome using recursion.
+
+🔹 Advanced:
+Generate all permutations of a string using recursion.
+
+Solve the N-Queens problem using recursion and backtracking.
+
+Solve the rat in a maze problem recursively.
+
+Generate all valid combinations of parentheses.
+
+Solve coin change or subset sum problem using recursion.
+
+🔸 Common Follow-ups Asked in Interviews
+“Can you optimize your recursive solution?” (expect memoization or DP)
+
+“What’s the time and space complexity of your recursive solution?”
+
+“What would you change in your code to avoid stack overflow?”
+
+“Can you write the iterative version as well?”
+
+“How does Java handle recursive method calls internally?”
+

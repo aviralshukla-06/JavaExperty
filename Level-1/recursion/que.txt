@@ -1,0 +1,52 @@
+🔹 Section 3: Recursion – Basics
+Write a recursive method to print numbers from 1 to N.
+
+Write a recursive method to find factorial of a number.
+
+Create a recursive function to compute the nth Fibonacci number.
+
+Write a recursive method to calculate the sum of digits of a number.
+
+Write a recursive method to count the number of zeroes in an integer.
+
+🔹 Section 4: Recursion – Intermediate
+Find GCD (Greatest Common Divisor) of two numbers using recursion.
+
+Convert a decimal number to binary using recursion.
+
+Implement a recursive method to reverse a string.
+
+Check if a string is a palindrome using recursion.
+
+Solve the Tower of Hanoi problem for N disks using recursion.
+
+Write a recursive function to print all subsets (power set) of a given string.
+
+Recursive implementation of binary search on a sorted array.
+
+Write a recursive function to multiply two integers without using * operator.
+
+Recursive method to compute the number of ways to climb stairs (1 or 2 steps at a time).
+
+Recursively compute the nth term of the Tribonacci series.
+
+🔹 Section 5: Recursion – Advanced/Proficient
+Solve N-Queens problem using recursion and backtracking.
+
+Write a recursive function to generate all permutations of a string.
+
+Generate all valid combinations of parentheses for given n pairs.
+
+Recursively solve the Sudoku puzzle.
+
+Write a recursive function to solve a maze problem (rat in a maze).
+
+Implement a recursive algorithm to find the longest common subsequence (LCS) of two strings.
+
+Recursive function to generate all possible combinations of k elements from n.
+
+Recursively solve the coin change problem (find the number of ways to make change).
+
+Use recursion to serialize and deserialize a binary tree.
+
+Implement recursion with memoization to solve Fibonacci in O(n).
