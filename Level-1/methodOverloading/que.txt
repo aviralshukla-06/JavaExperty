@@ -1,69 +1,45 @@
 
 🔹 Section 1: Method Overloading – Basics
 Create a method add that adds two integers. Overload it to:
-
 Add two double values.
-
 Add three integers.
-
 Add a string and an integer (concatenation).
 
 Write a class Display with overloaded methods show():
-
 No parameters.
-
 One int parameter.
-
 One String parameter.
 
 Write a program with a method multiply() overloaded for:
-
 Two integers.
-
 Two floats.
-
 One integer and one float.
 
 Create a method printDetails to print employee details. Overload it to accept:
-
 Name only.
-
 Name and Age.
-
 Name, Age, and Salary.
 
 What happens if two overloaded methods differ only in return type? Try to compile and observe.
 
 🔹 Section 2: Method Overloading – Intermediate
 Overload a constructor for a Rectangle class:
-
 No-arg constructor (default size 1x1).
-
 Constructor with one parameter (square).
-
 Constructor with two parameters (width, height).
 
 Create a Calculator class and overload the calculate() method to perform:
-
 Addition of two numbers.
-
 Subtraction of three numbers.
-
 Multiplication of an array of numbers.
 
 Overload a method area() to calculate area of:
-
 Circle
-
 Rectangle
-
 Triangle
 
 Write overloaded versions of a method max() to find the maximum of:
-
 Two integers
-
 Two floats
-
 Three integers
 

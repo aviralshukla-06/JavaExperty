@@ -1,0 +1,86 @@
+Set 2: Deep Interview Questions (Topic-wise)
+
+Core OOP/Classes
+
+What is the difference between a class and an object?
+
+How does Java achieve polymorphism?
+
+What is the purpose of encapsulation?
+
+How does abstraction differ from encapsulation?
+
+Can a constructor be inherited?
+
+What is the difference between overloading and overriding?
+
+What is object slicing?
+
+How does Java handle multiple inheritance?
+
+What is shadowing in Java?
+
+Can you override a private or static method?
+
+Constructors
+
+What is the purpose of constructor chaining?
+
+What happens if a constructor throws an exception?
+
+Can constructors be abstract or static?
+
+Why is constructor overloading used?
+
+What is the difference between constructor and factory method?
+
+this and super
+
+Can this() and super() be used together?
+
+What happens if you forget to call super() in subclass constructor?
+
+Why is this not allowed in static context?
+
+Access Modifiers
+
+Explain the visibility levels: public, private, protected, and default.
+
+How does package-private access work?
+
+Can we restrict inheritance using access modifiers?
+
+Encapsulation & Abstraction
+
+How does encapsulation increase maintainability?
+
+How can abstraction be achieved without using abstract classes?
+
+Can you give an example where abstraction is better than inheritance?
+
+Why is data hiding important?
+
+Inheritance & Polymorphism
+
+What is dynamic method dispatch?
+
+How does method resolution work at runtime?
+
+What is the Liskov Substitution Principle?
+
+How is instanceof used safely?
+
+What are the pitfalls of deep inheritance?
+
+Misc
+
+What is coupling and cohesion? How do OOP principles affect them?
+
+Can we create anonymous classes in Java? When are they useful?
+
+What design patterns rely heavily on OOP principles?
+
+How are inner classes used in Java?
+
+Why are interfaces preferred over abstract classes in some designs?
+

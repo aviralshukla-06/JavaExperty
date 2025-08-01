@@ -1,0 +1,333 @@
+Java OOP Practice Questions
+
+Set 1: Practice Questions (20+ for each topic)
+
+1. Java OOP
+
+What are the four pillars of OOP? Define each with examples.
+
+Create a class for Employee and implement encapsulation.
+
+Demonstrate abstraction using an abstract class Vehicle.
+
+Use polymorphism with method overriding.
+
+Create a class hierarchy for Shape (Circle, Rectangle, Triangle).
+
+Show an example of object composition (Car has an Engine).
+
+Implement interface-based abstraction using Flyable.
+
+Design a class structure for a School Management System.
+
+Simulate a login system using classes and methods.
+
+Demonstrate method overloading in a class Calculator.
+
+Create a class diagram for an E-commerce app.
+
+Use inheritance to create base and derived classes.
+
+Write code showing constructor chaining.
+
+Show difference between shallow and deep copy.
+
+Model a bank system with encapsulation and abstraction.
+
+Create a class Person with methods eat(), sleep(), work().
+
+Demonstrate upcasting and downcasting.
+
+Implement static and final methods.
+
+Write a class using both inheritance and interfaces.
+
+Override toString() and equals() methods.
+
+2. Java Classes/Objects
+
+Define a class Book with title, author, and price.
+
+Create multiple objects of the Book class.
+
+Pass objects as parameters to a method.
+
+Return an object from a method.
+
+Create a class Car and initialize it using a constructor.
+
+Compare two objects using equals().
+
+Demonstrate default constructor and parameterized constructor.
+
+Store multiple objects in an array or list.
+
+Clone an object using a copy constructor.
+
+Show how to assign one object to another.
+
+Create a class with both instance and static variables.
+
+Track the number of objects created.
+
+Use this to resolve naming conflicts.
+
+Demonstrate constructor overloading.
+
+Write a class with a method that uses an object as argument.
+
+Implement object composition (Laptop has Processor).
+
+Print object details using toString().
+
+Differentiate between class and object.
+
+Create a static method and call it without creating an object.
+
+Create a factory method that returns objects based on input.
+
+3. Java Class Attributes
+
+Define attributes with default, private, and public access.
+
+Initialize attributes using constructors.
+
+Modify and access attributes using getters/setters.
+
+Differentiate between instance and static attributes.
+
+Create constants using final keyword.
+
+Create a counter using a static attribute.
+
+Use access modifiers to restrict direct access.
+
+Demonstrate attribute hiding with inheritance.
+
+Use attributes with default values.
+
+Show variable shadowing in methods.
+
+Create a class with mutable and immutable attributes.
+
+Implement a configuration class using static final attributes.
+
+Demonstrate encapsulated attribute validation.
+
+Compare objects by comparing attributes.
+
+Show what happens when you try to access private attributes directly.
+
+Change attribute values after object creation.
+
+Use this to distinguish attributes from parameters.
+
+Group attributes logically in a class.
+
+Track total instances using static variables.
+
+Use different access levels for different attributes.
+
+4. Java Class Methods
+
+Define a simple method with no parameters.
+
+Create a method that returns a value.
+
+Use parameters in methods.
+
+Implement method overloading.
+
+Use recursion in a method.
+
+Call a method from another method.
+
+Return an object from a method.
+
+Use this inside a method.
+
+Create static methods.
+
+Use final methods.
+
+Call methods from another class.
+
+Demonstrate method overriding.
+
+Use access modifiers with methods.
+
+Create utility methods in a helper class.
+
+Call a method using object reference.
+
+Handle exceptions inside methods.
+
+Define and use private methods.
+
+Use method chaining.
+
+Explain the difference between constructor and method.
+
+Pass primitive and object data types to methods.
+
+5. Java Constructors
+
+Create a class with a default constructor.
+
+Create a class with a parameterized constructor.
+
+Overload constructors.
+
+Chain constructors using this().
+
+Call a superclass constructor using super().
+
+Use a constructor to set default values.
+
+Create a copy constructor.
+
+Track number of objects created using constructor.
+
+Demonstrate constructor overloading and chaining together.
+
+Create a constructor that throws an exception.
+
+Use constructor in inheritance hierarchy.
+
+Differentiate between method and constructor.
+
+Write a class without any constructors.
+
+Create a private constructor.
+
+Use constructors for dependency injection.
+
+Implement a builder pattern.
+
+Create immutable class using constructors.
+
+Test constructor with invalid input.
+
+Assign default values to attributes using constructor.
+
+Prevent constructor overriding in subclass.
+
+6. Java "this" Keyword
+
+Use this to refer to current object.
+
+Call another constructor using this().
+
+Use this to resolve variable naming conflict.
+
+Pass this as argument in method.
+
+Return current object using this.
+
+Demonstrate method chaining with this.
+
+Show how this cannot be used in static context.
+
+Access instance variables and methods using this.
+
+Use this in setters and getters.
+
+Explain the scope of this keyword.
+
+7. Java Modifiers
+
+Use private, public, and protected modifiers.
+
+Demonstrate default access modifier.
+
+Create a class with final variables.
+
+Use static methods and variables.
+
+Prevent method overriding using final method.
+
+Demonstrate protected access with inheritance.
+
+Create immutable class using final.
+
+Differentiate between static and instance methods.
+
+Create an abstract class with abstract methods.
+
+Use final class and try to inherit from it.
+
+8. Java Encapsulation
+
+Create a class with private variables.
+
+Provide public getters and setters.
+
+Add validation inside setters.
+
+Prevent direct access to sensitive data.
+
+Modify internal implementation without changing API.
+
+Combine multiple private fields in a single encapsulated class.
+
+Encapsulate data access in business logic class.
+
+Compare encapsulation with non-encapsulation design.
+
+Implement encapsulated settings or configuration class.
+
+Use encapsulation in an API response model.
+
+9. Java Packages / API
+
+Create and use your own package.
+
+Import and use Java built-in package.
+
+Explore and use classes from java.util package.
+
+Organize classes using packages.
+
+Demonstrate package-private access.
+
+Create subpackages and use them.
+
+Write a class in one package and use it in another.
+
+Avoid name conflicts using package names.
+
+Use Scanner from java.util in a program.
+
+Create reusable utility class in a package.
+
+10. Java Inheritance
+
+Create a base and derived class.
+
+Use extends keyword.
+
+Override a method from superclass.
+
+Use super to call superclass method.
+
+Use super to call superclass constructor.
+
+Create a multi-level inheritance.
+
+Use polymorphism with base class reference.
+
+Demonstrate method overriding and overloading.
+
+Prevent inheritance using final.
+
+Compare inheritance and composition.
+
+Show constructor execution order.
+
+Implement interface inheritance.
+
+Use abstract class with concrete subclass.
+
+Demonstrate typecasting in inheritance.
+
+Create hierarchical inheritance.
