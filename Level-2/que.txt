@@ -1,7 +1,5 @@
 Java OOP Practice Questions
 
-Set 1: Practice Questions (20+ for each topic)
-
 1. Java OOP
 
 What are the four pillars of OOP? Define each with examples.
