@@ -35,10 +35,26 @@ public class CreateWrite {
         }
     }
 
+    public void deleteFile() {
+        try {
+            File fileToDelete = new File("D:\\JavaDevelopment\\linkedList\\CreateList.java");
+            if (fileToDelete.delete()) {
+                System.out.println("Successfully deleted " + fileToDelete.getName());
+            } else {
+                System.out.println("File did not exist");
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println(e);
+        }
+    }
+
     public static void main(String[] args) {
-        CreateWrite myObj1 = new CreateWrite();
-        CreateWrite myObj2 = new CreateWrite();
-        myObj1.createFile();
-        myObj2.writeMyFile();
+        // CreateWrite myObj1 = new CreateWrite();
+        // CreateWrite myObj2 = new CreateWrite();
+        CreateWrite myObj3 = new CreateWrite();
+        // myObj1.createFile();
+        // myObj2.writeMyFile();
+        myObj3.deleteFile();
     }
 }
