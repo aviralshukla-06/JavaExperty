@@ -2,25 +2,26 @@ Java OOP Practice Questions
 
 1. Java OOP
 
-What are the four pillars of OOP? Define each with examples.
+Create a class Employee with private fields. Add getter and setter methods (Encapsulation).
 
-Create a class for Employee and implement encapsulation.
 
-Demonstrate abstraction using an abstract class Vehicle.
+Create an abstract class Vehicle with an abstract method move(). Implement it in Car and Bike.
 
-Use polymorphism with method overriding.
+Show method overriding in a parent class Animal and child class Dog.
 
-Create a class hierarchy for Shape (Circle, Rectangle, Triangle).
+Implement inheritance in a class hierarchy: Shape → Circle, Rectangle, Triangle.
 
-Show an example of object composition (Car has an Engine).
+Model a class Car that contains an Engine object (Composition).
 
-Implement interface-based abstraction using Flyable.
+Create an interface Flyable and implement it in Bird and Airplane.
 
-Design a class structure for a School Management System.
+Design a class structure for a mini School Management System (Student, Teacher, Course)
 
-Simulate a login system using classes and methods.
+Write a class LoginSystem with methods to simulate login and logout.
 
-Demonstrate method overloading in a class Calculator.
+Show upcasting and downcasting between Animal and Dog.
+
+Write a BankAccount class using encapsulation and a withdrawal method with validation.
 
 Create a class diagram for an E-commerce app.
 
@@ -28,11 +29,9 @@ Use inheritance to create base and derived classes.
 
 Write code showing constructor chaining.
 
-Show difference between shallow and deep copy.
-
 Model a bank system with encapsulation and abstraction.
 
-Create a class Person with methods eat(), sleep(), work().
+Create a shallow copy and a deep copy of an object using constructors.
 
 Demonstrate upcasting and downcasting.
 
@@ -41,6 +40,8 @@ Implement static and final methods.
 Write a class using both inheritance and interfaces.
 
 Override toString() and equals() methods.
+
+Write a Shape array holding different shapes, and call their draw() method using polymorphism.
 
 2. Java Classes/Objects
 
