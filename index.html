@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>React Error Boundaries — Cards (@sillytechie)</title>
+
+  <!-- html2canvas for PNG export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    :root {
+      --bg:#0f1724;
+      --card:#1c2536;
+      --muted:#94a3b8;
+      --accent:#3b82f6;
+      --success:#16a34a;
+      --danger:#ef4444;
+      --radius:12px;
+    }
+
+    body {
+      margin:0;
+      background:var(--bg);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto;
+      color:#f1f5f9;
+    }
+
+    .page {
+      max-width:900px;
+      margin:0 auto;
+      padding:16px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap:24px;
+    }
+
+    .card-wrapper {
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      align-items:stretch;
+    }
+
+    .card {
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      position:relative;
+      min-height:260px;
+    }
+
+    .title {
+      font-size:1rem;
+      font-weight:600;
+      margin-bottom:6px;
+    }
+
+    .diagram {
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      text-align:center;
+    }
+
+    .box {
+      background:#0f172a;
+      border-radius:8px;
+      padding:10px 14px;
+      min-width:140px;
+      font-size:0.9rem;
+    }
+
+    .arrow {
+      font-size:1.2rem;
+      color:var(--muted);
+    }
+
+    .green { background:#022c22; color:var(--success); }
+    .red { background:#450a0a; color:var(--danger); }
+
+    .notes { text-align:left; font-size:0.9rem; line-height:1.4; color:var(--muted); }
+
+    .watermark {
+      position:absolute;
+      bottom:8px;
+      right:10px;
+      font-size:0.75rem;
+      opacity:0.3;
+    }
+
+    .download-btn {
+      background:var(--accent);
+      color:white;
+      border:none;
+      padding:8px 12px;
+      border-radius:8px;
+      font-size:0.85rem;
+      cursor:pointer;
+      align-self:flex-end;
+    }
+
+    /* 📱 Mobile tweaks */
+    @media (max-width:480px) {
+      .page { grid-template-columns:1fr; padding:10px; }
+      .card { padding:14px; }
+      .box { min-width:120px; font-size:0.85rem; }
+      .download-btn { width:100%; font-size:0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <!-- Card 1: Concept -->
+    <div class="card-wrapper">
+      <section class="card" id="card-concept">
+        <div class="title">React Error Boundaries — Concept</div>
+        <div class="diagram">
+          <div class="box">App</div>
+          <div class="arrow">⬇</div>
+          <div class="box">Error Boundary</div>
+          <div class="arrow">⬇</div>
+          <div class="box">Child Component</div>
+        </div>
+        <div class="watermark">@sillytechie</div>
+      </section>
+      <button class="download-btn" data-target="card-concept">Download</button>
+    </div>
+
+    <!-- Card 2: Flow Behavior -->
+    <div class="card-wrapper">
+      <section class="card" id="card-flow">
+        <div class="title">React Error Boundaries — Flow Behavior</div>
+        <div class="diagram">
+          <div class="box">Child Component</div>
+          <div class="arrow">⇩</div>
+          <div class="box green">✅ No Error → UI renders</div>
+          <div class="arrow">or</div>
+          <div class="box red">❌ Error → Boundary catches</div>
+          <div class="arrow">⇩</div>
+          <div class="box">Fallback UI (“Oops, something went wrong”)</div>
+        </div>
+        <div class="watermark">@sillytechie</div>
+      </section>
+      <button class="download-btn" data-target="card-flow">Download</button>
+    </div>
+
+    <!-- Card 3: Key Notes -->
+    <div class="card-wrapper">
+      <section class="card" id="card-notes">
+        <div class="title">React Error Boundaries — Key Notes</div>
+        <div class="diagram notes">
+          <div>🔹 Only catches errors below it.</div>
+          <div>🔹 Shows fallback UI instead of crashing app.</div>
+          <div>🔹 Great for isolating risky parts (widgets, charts, routes).</div>
+        </div>
+        <div class="watermark">@sillytechie</div>
+      </section>
+      <button class="download-btn" data-target="card-notes">Download</button>
+    </div>
+
+  </main>
+
+  <script>
+    function downloadCard(cardId) {
+      const el = document.getElementById(cardId);
+      html2canvas(el, {scale:2, backgroundColor:null}).then(canvas => {
+        const link = document.createElement('a');
+        link.download = cardId + ".png";
+        link.href = canvas.toDataURL();
+        link.click();
+      });
+    }
+
+    document.querySelectorAll('.download-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        downloadCard(btn.dataset.target);
+      });
+    });
+  </script>
+</body>
+</html>
