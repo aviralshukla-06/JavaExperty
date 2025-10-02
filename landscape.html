@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduVibe - Where education meets vibe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      background: linear-gradient(to bottom, #0c3b4a, #1a6c7a, #4a9ab7);
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .left, .right {
+      width: 50%;
+      padding: 20px;
+    }
+
+    /* Left Section (Logo + Title) */
+    .logo-section {
+      text-align: center;
+    }
+
+    .operator {
+  display: inline-block;
+  margin: 0 auto 20px;   /* center + space below */
+  padding: 8px 20px;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #FFD033;
+  border: 3px solid #FFD033;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+    .logo img {
+      width: 300px;
+      height: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      font-size: 90px;
+      font-family: serif;
+      color: white;
+      letter-spacing: 2px;
+    }
+    h2 {
+      margin-top: -10px;
+      font-family: serif;
+      font-size: 90px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 35px;
+      font-style: italic;
+      color: #FFD033;
+      margin-bottom: 20px;
+    }
+
+    /* Classes Section */
+    .classes-section h2 {
+      font-size: 32px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 12px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* Enroll section */
+    .enroll-section {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .enroll-btn {
+      background-color: #9AE34F;
+      color: #0c3b4a;
+      border: none;
+      padding: 12px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .enroll-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Specialized Section */
+    .specialized-section h3 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .subjects {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .subject {
+      text-align: center;
+      margin: 15px;
+    }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 10px;
+      color: #0c3b4a;
+    }
+
+    .icon i {
+      font-size: 32px;
+    }
+
+    .maths { background-color: #FFD033; }
+    .science { background-color: #9AE34F; }
+    .social { background-color: #4A9AB7; }
+    .english { background-color: #E74C3C; }
+
+    /* Why Section */
+    .why-section {
+      margin-top: 20px;
+      text-align: left;
+      padding: 0 10px;
+    }
+
+    .why-section h2 {
+      font-size: 26px;
+      color: #FFD033;
+      margin-bottom: 12px;
+    }
+
+    .why-section ul {
+      list-style-type: none;
+    }
+
+    .why-section li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+      font-size: 18px;
+    }
+
+    .why-section li:before {
+      content: "•";
+      color: #FFD033;
+      font-size: 20px;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      padding: 15px 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+
+    .website {
+      text-align: right;
+      font-size: 16px;
+    }
+
+    /* Decorative elements */
+    .container:before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 120px;
+      height: 120px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .container:after {
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 120px;
+      height: 120px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    /* Download Button */
+    #downloadBtn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #FFD033;
+      color: #0c3b4a;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #downloadBtn:hover {
+      background-color: #e6ba2d;
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .left, .right {
+        width: 100%;
+      }
+      h1 {
+        font-size: 60px;
+      }
+      .tagline {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="poster" class="container">
+    <!-- Left Half (Logo + Title) -->
+    <div class="left">
+      <div class="logo-section">
+        <div class="operator">UTKARSH SIR's</div>
+        <div class="logo">
+          <img src="logo/image-removebg-preview.png" alt="EduVibe Logo">
+        </div>
+        <h1>EduVibe</h1>
+        <h2>Learners</h2>
+        <p class="tagline">...Where education meets vibe</p>
+      </div>
+
+         <!-- <div class="enroll-section">
+      <button class="enroll-btn">ENROLL NOW!</button>
+    </div> -->
+    </div>
+
+    <!-- Right Half (Classes & Details) -->
+    <div class="right">
+      <div class="classes-section">
+        <h2>CLASSES FOR STD. 5 - 10</h2>
+      </div>
+
+      <div class="specialized-section">
+        <h3>Specialized In</h3>
+        <div class="subjects">
+          <div class="subject">
+            <div class="icon maths"><i class="fas fa-plus"></i></div>
+            <p>Maths</p>
+          </div>
+          <div class="subject">
+            <div class="icon science"><i class="fas fa-flask"></i></div>
+            <p>Science</p>
+          </div>
+          <div class="subject">
+            <div class="icon social"><i class="fas fa-globe"></i></div>
+            <p>Social Science</p>
+          </div>
+          <div class="subject">
+            <div class="icon english"><i class="fas fa-book-open"></i></div>
+            <p>English</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-section">
+        <h2>Why Choose Us?</h2>
+        <ul>
+          <li>Experienced, Passionate Educators</li>
+          <li>Interactive Learning & Digital Tools</li>
+          <li>Conceptual Clarity & Exam Focus</li>
+          <li>Regular Assessments & Doubt Support</li>
+        </ul>
+      </div>
+
+      <div class="contact-section">
+        <p> <span style="color: yellow;">Contact</span>: 8180047283</p>
+        <div class="website">
+        
+       
+            <!-- <i class="fa-solid fa-location-pin"></i> -->
+             <pre style="margin-top: 6px; font-size: 18px;">
+            <span style="color: yellow;font-size: 20px;">  Address</span> : Shop no.o2, Mohan Avenue,
+            Opp.Mohan Tower, Mharal Gaon,Kalyan
+            </pre>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download Button -->
+  <button id="downloadBtn">Download Poster</button>
+
+  <script>
+    document.getElementById("downloadBtn").addEventListener("click", function () {
+      html2canvas(document.querySelector("#poster"), { scale: 2 }).then(canvas => {
+        let link = document.createElement("a");
+        link.download = "EduVibe_Poster.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,189 +1,310 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>React Error Boundaries — Cards (@sillytechie)</title>
-
-  <!-- html2canvas for PNG export -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduVibe - Where education meets vibe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    :root {
-      --bg:#0f1724;
-      --card:#1c2536;
-      --muted:#94a3b8;
-      --accent:#3b82f6;
-      --success:#16a34a;
-      --danger:#ef4444;
-      --radius:12px;
+    /* EduVibe Advertisement Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
     }
 
     body {
-      margin:0;
-      background:var(--bg);
-      font-family:system-ui,-apple-system,"Segoe UI",Roboto;
-      color:#f1f5f9;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
     }
 
-    .page {
-      max-width:900px;
-      margin:0 auto;
-      padding:16px;
-      display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap:24px;
+    .container {
+      width: 600px;
+      background: linear-gradient(to bottom, #0c3b4a, #1a6c7a, #4a9ab7);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
     }
 
-    .card-wrapper {
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      align-items:stretch;
+    /* Logo Section */
+    .logo-section {
+      margin-bottom: 20px;
     }
 
-    .card {
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:16px;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      position:relative;
-      min-height:260px;
+    .logo img{
+      width: 200px;
+      height: 200px;
+      margin: 0 ;
+      background-color: transparent;
     }
 
-    .title {
-      font-size:1rem;
-      font-weight:600;
-      margin-bottom:6px;
+    h1 {
+      font-size: 110px;
+      margin:-4 0;
+      color: white;
+      letter-spacing: 2px;
     }
 
-    .diagram {
-      flex:1;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      text-align:center;
+    .tagline {
+      font-size: 30px;
+      font-style: italic;
+      color: #FFD033;
+      margin-bottom: 20px;
     }
 
-    .box {
-      background:#0f172a;
-      border-radius:8px;
-      padding:10px 14px;
-      min-width:140px;
-      font-size:0.9rem;
+    /* Classes Section */
+    .classes-section h2 {
+      font-size: 28px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
     }
 
-    .arrow {
-      font-size:1.2rem;
-      color:var(--muted);
+    /* Specialized Section */
+    .specialized-section h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
     }
 
-    .green { background:#022c22; color:var(--success); }
-    .red { background:#450a0a; color:var(--danger); }
-
-    .notes { text-align:left; font-size:0.9rem; line-height:1.4; color:var(--muted); }
-
-    .watermark {
-      position:absolute;
-      bottom:8px;
-      right:10px;
-      font-size:0.75rem;
-      opacity:0.3;
+    .subjects {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+      flex-wrap: wrap;
     }
 
-    .download-btn {
-      background:var(--accent);
-      color:white;
-      border:none;
-      padding:8px 12px;
-      border-radius:8px;
-      font-size:0.85rem;
-      cursor:pointer;
-      align-self:flex-end;
+    .subject {
+      text-align: center;
+      margin: 10px;
     }
 
-    /* 📱 Mobile tweaks */
-    @media (max-width:480px) {
-      .page { grid-template-columns:1fr; padding:10px; }
-      .card { padding:14px; }
-      .box { min-width:120px; font-size:0.85rem; }
-      .download-btn { width:100%; font-size:0.95rem; }
+    .icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 10px;
+      color: #0c3b4a;
+    }
+
+    .icon i {
+      font-size: 28px;
+    }
+
+    .maths {
+      background-color: #FFD033;
+    }
+
+    .science {
+      background-color: #9AE34F;
+    }
+
+    .social {
+      background-color: #4A9AB7;
+    }
+
+    .english {
+      background-color: #E74C3C;
+    }
+
+    /* Why Section */
+    .why-section {
+      margin-bottom: 20px;
+      text-align: left;
+      padding: 0 20px;
+    }
+
+    .why-section h2 {
+      font-size: 24px;
+      color: #FFD033;
+      margin-bottom: 10px;
+    }
+
+    .why-section ul {
+      list-style-type: none;
+    }
+
+    .why-section li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 25px;
+      font-size: 16px;
+    }
+
+    .why-section li:before {
+      content: "•";
+      color: #FFD033;
+      font-size: 20px;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Enroll Section */
+    .enroll-section {
+      margin: 30px 0;
+    }
+
+    .enroll-btn {
+      background-color: #9AE34F;
+      color: #0c3b4a;
+      border: none;
+      padding: 12px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .enroll-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+
+    .qr-code {
+      width: 60px;
+      height: 60px;
+      background-color: white;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .qr-code img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .website {
+      text-align: right;
+      font-size: 14px;
+    }
+
+    /* Decorative elements */
+    .container:before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .container:after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      left: -50px;
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
     }
   </style>
 </head>
 <body>
-  <main class="page">
-
-    <!-- Card 1: Concept -->
-    <div class="card-wrapper">
-      <section class="card" id="card-concept">
-        <div class="title">React Error Boundaries — Concept</div>
-        <div class="diagram">
-          <div class="box">App</div>
-          <div class="arrow">⬇</div>
-          <div class="box">Error Boundary</div>
-          <div class="arrow">⬇</div>
-          <div class="box">Child Component</div>
-        </div>
-        <div class="watermark">@sillytechie</div>
-      </section>
-      <button class="download-btn" data-target="card-concept">Download</button>
+  <div class="container">
+    <div class="logo-section">
+      <div class="logo">
+        <!-- Replace with your real SVG paths -->
+        <img src="logo/image-removebg-preview.png" alt="" >
+      </div>
+      <h1>EduVibe</h1>
+      <p class="tagline">...Where education meets vibe</p>
     </div>
 
-    <!-- Card 2: Flow Behavior -->
-    <div class="card-wrapper">
-      <section class="card" id="card-flow">
-        <div class="title">React Error Boundaries — Flow Behavior</div>
-        <div class="diagram">
-          <div class="box">Child Component</div>
-          <div class="arrow">⇩</div>
-          <div class="box green">✅ No Error → UI renders</div>
-          <div class="arrow">or</div>
-          <div class="box red">❌ Error → Boundary catches</div>
-          <div class="arrow">⇩</div>
-          <div class="box">Fallback UI (“Oops, something went wrong”)</div>
-        </div>
-        <div class="watermark">@sillytechie</div>
-      </section>
-      <button class="download-btn" data-target="card-flow">Download</button>
+    <div class="classes-section">
+      <h2>CLASSES FOR STD. 5 - 10</h2>
     </div>
 
-    <!-- Card 3: Key Notes -->
-    <div class="card-wrapper">
-      <section class="card" id="card-notes">
-        <div class="title">React Error Boundaries — Key Notes</div>
-        <div class="diagram notes">
-          <div>🔹 Only catches errors below it.</div>
-          <div>🔹 Shows fallback UI instead of crashing app.</div>
-          <div>🔹 Great for isolating risky parts (widgets, charts, routes).</div>
+    <div class="specialized-section">
+      <h3>Specialized In</h3>
+      <div class="subjects">
+        <div class="subject">
+          <div class="icon maths">
+            <i class="fas fa-plus"></i>
+          </div>
+          <p>Maths</p>
         </div>
-        <div class="watermark">@sillytechie</div>
-      </section>
-      <button class="download-btn" data-target="card-notes">Download</button>
+        <div class="subject">
+          <div class="icon science">
+            <i class="fas fa-flask"></i>
+          </div>
+          <p>Science</p>
+        </div>
+        <div class="subject">
+          <div class="icon social">
+            <i class="fas fa-globe"></i>
+          </div>
+          <p>Social Science</p>
+        </div>
+        <div class="subject">
+          <div class="icon english">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <p>English</p>
+        </div>
+      </div>
     </div>
 
-  </main>
+    <div class="why-section">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Experienced, Passionate Educators</li>
+        <li>Interactive Learning & Digital Tools</li>
+        <li>Conceptual Clarity & Exam Focus</li>
+        <li>Regular Assessments & Doubt Support</li>
+      </ul>
+    </div>
+
+    <div class="enroll-section">
+      <button class="enroll-btn">ENROLL NOW!</button>
+    </div>
+
+    <div class="contact-section">
+      <p>Contact: 8180047283</p>
+      <!-- <div class="qr-code">
+      
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=www.eduvibe.com&size=60x60" alt="QR Code">
+      </div> -->
+      <div class="website">
+        <!-- <p>www.eduvibe.com</p> -->
+        <p><i class="fab fa-whatsapp"></i> 8180047283</p>
+      </div>
+    </div>
+  </div>
 
   <script>
-    function downloadCard(cardId) {
-      const el = document.getElementById(cardId);
-      html2canvas(el, {scale:2, backgroundColor:null}).then(canvas => {
-        const link = document.createElement('a');
-        link.download = cardId + ".png";
-        link.href = canvas.toDataURL();
-        link.click();
-      });
-    }
-
-    document.querySelectorAll('.download-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        downloadCard(btn.dataset.target);
-      });
+    // Add functionality to the enroll button
+    document.querySelector('.enroll-btn').addEventListener('click', function() {
+      alert('Thank you for your interest in EduVibe! Please contact us at the number provided to complete your enrollment.');
     });
   </script>
 </body>
 </html>
+ 
